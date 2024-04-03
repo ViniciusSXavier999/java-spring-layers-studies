@@ -17,8 +17,9 @@ public class UserDTO {
 		this.name = name;
 	}
 
-	// fazendo a conversão de DTO para user
+	// fazendo a conversão de user para DTO
 	public UserDTO(User user) {
+		// copiando os dados de user para userDTO através do método GET.
 		id = user.getId();
 		name = user.getName();
 	}
