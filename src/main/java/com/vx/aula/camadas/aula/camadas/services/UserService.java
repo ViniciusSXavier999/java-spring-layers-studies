@@ -2,6 +2,7 @@ package com.vx.aula.camadas.aula.camadas.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.vx.aula.camadas.aula.camadas.dto.UserDTO;
 import com.vx.aula.camadas.aula.camadas.entities.User;
@@ -14,6 +15,7 @@ public class UserService {
 	private UserRepository repository;
 	
 	
+	@Transactional(readOnly = true)
 	public UserDTO buscaId(Long id) {
 		
 		/*O meu repository trabalha com entity que é o USER*/
