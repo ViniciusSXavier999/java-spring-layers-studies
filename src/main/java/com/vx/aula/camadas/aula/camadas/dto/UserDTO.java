@@ -7,6 +7,7 @@ public class UserDTO {
 
 	private Long id;
 	private String name;
+	private String password;
 
 	public UserDTO() {
 
@@ -20,8 +21,9 @@ public class UserDTO {
 	// fazendo a conversão de user para DTO
 	public UserDTO(User user) {
 		// copiando os dados de user para userDTO através do método GET.
-		id = user.getId();
-		name = user.getName();
+		this.id = user.getId();
+		this.name = user.getName();
+		this.password = user.getPassword();
 	}
 
 	public Long getId() {
